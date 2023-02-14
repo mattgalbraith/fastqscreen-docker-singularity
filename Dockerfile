@@ -51,5 +51,5 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-COPY --from=base /FastQ-Screen-0.15.2/* /usr/local/bin
-COPY --from=base /bowtie2-2.5.1-linux-x86_64/* /usr/local/bin
+COPY --from=base /FastQ-Screen-0.15.2/* /usr/local/bin/
+COPY --from=base /bowtie2-2.5.1-linux-x86_64/* /usr/local/bin/

@@ -69,7 +69,7 @@ wget https://www.bioinformatics.babraham.ac.uk/projects/fastq_screen/fastq_scree
 
 REFERENCES_DIR=/path/to/references # location on host system
 
-docker run -it --rm -v ${PWD}:/data -w /data -v ${REFERENCES_DIR}:/references fastq_screen:fastqscreen:0.15.2 \
+docker run -it --rm -v ${PWD}:/data -w /data -v ${REFERENCES_DIR}:/references fastqscreen:0.15.2 \
 	fastq_screen \
 	--conf ./fastq_screen.conf \
 	./fastq_screen_test_dataset/fqs_test_dataset.fastq.gz \
