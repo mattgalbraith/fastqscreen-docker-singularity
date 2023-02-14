@@ -90,8 +90,8 @@ https://github.com/mattgalbraith/singularity-docker
 ### 4. Save Docker image as tar and convert to sif (using singularity run from Docker container)  
 ``` bash
 docker images
-docker save <Image_ID> -o fastqscreen-docker.tar && gzip fastqscreen-docker.tar # = IMAGE_ID of fastqscreen image
-docker run -v "$PWD":/data --rm -it singularity bash -c "singularity build /data/fastqscreen.sif docker-archive:///data/fastqscreen-docker.tar.gz"
+docker save <Image_ID> -o fastqscreen0.15.2-docker.tar && gzip fastqscreen0.15.2-docker.tar # = IMAGE_ID of fastqscreen image
+docker run -v "$PWD":/data --rm -it singularity bash -c "singularity build /data/fastqscreen0.15.2.sif docker-archive:///data/fastqscreen0.15.2-docker.tar.gz"
 ```
 NB: On Apple M1/M2 machines ensure Singularity image is built with x86_64 architecture or sif may get built with arm64  
 
@@ -100,7 +100,7 @@ Next, transfer the fastqscreen.sif file to the system on which you want to run F
 ### 5. Test singularity container on (HPC) system with Singularity/Apptainer available  
 ``` bash
 # set up path to the FastQ Screen Singularity container
-FASTQ_SCREEN_SIF=path/to/fastqscreen.sif
+FASTQ_SCREEN_SIF=path/to/fastqscreen0.15.2.sif
 
 # Test that FastQ Screen can run from Singularity container
 singularity run $FASTQ_SCREEN_SIF fastq_screen --help # depending on system/version, singularity may be called apptainer
