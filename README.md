@@ -91,7 +91,7 @@ https://github.com/mattgalbraith/singularity-docker
 ``` bash
 docker images
 docker save <Image_ID> -o fastqscreen0.15.2-docker.tar && gzip fastqscreen0.15.2-docker.tar # = IMAGE_ID of fastqscreen image
-docker run -v "$PWD":/data --rm -it singularity bash -c "singularity build /data/fastqscreen0.15.2.sif docker-archive:///data/fastqscreen0.15.2-docker.tar.gz"
+docker run -v "$PWD":/data --rm -it singularity:1.1.5 bash -c "singularity build /data/fastqscreen0.15.2.sif docker-archive:///data/fastqscreen0.15.2-docker.tar.gz"
 ```
 NB: On Apple M1/M2 machines ensure Singularity image is built with x86_64 architecture or sif may get built with arm64  
 
