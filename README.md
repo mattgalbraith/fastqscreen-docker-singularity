@@ -1,4 +1,4 @@
-[![Docker Image CI](https://github.com/mattgalbraith/fastqscreen-docker-singularity/actions/workflows/docker-image.yml/badge.svg)](https://github.com/mattgalbraith/samtools-fastqscreen-singularity/actions/workflows/docker-image.yml)
+[![Docker Image CI](https://github.com/mattgalbraith/fastqscreen-docker-singularity/actions/workflows/docker-image.yml/badge.svg)](https://github.com/mattgalbraith/fastqscreen-singularity/actions/workflows/docker-image.yml)
 # fastqscreen-docker-singularity
 ## Build Docker container for FastQ Screen software and (optionally) convert to Apptainer/Singularity.  
 FastQ Screen allows you to screen a library of sequences in FastQ format against a set of sequence databases so you can see if the composition of the library matches with what you expect.  
